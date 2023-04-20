@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    /* outline: 2px solid red; */
+  }
+}
+img {
+    width: 30px;
+    height: 30px;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Oswald', sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-rows:  3.125rem;
+   min-height: 100vh;
+}
+
+nav {
+ grid-column: 1 / 2;
+ min-height: 100vh;
+ background-color: #d4d4d4; 
+}
+
+.nav__logo {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.nav__icon > ul {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  justify-content: end;
+}
+
+.nav__icon >ul:first-child {
+  margin-bottom: 4em;
+}
+
+.nav__icon > ul {
+  display: flex;
+  gap: 1em;
+  
+}
+.nav__icon ul > li {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  flex-direction: row;
+}
+
+header {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 1em;
+}
+
+.search {
+  min-width: 50em;
+  border: none;
+  border-radius: 100px;
+  margin-inline: 1em;
+}
+
+.search__icon {
+  margin-inline-end: 0.3em ;
+}
+
+.header__left--top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__right--top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  font-size: 1.2rem;
+}
+
+.header__bot {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -15px;
+}
+
+.header__left--bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.header__right--bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.header__right--bot > button {
+  padding: 0.2em 1.2em;
+  border: none;
+  border-radius: 75px;
+  background-color: #334155;
+  color: #fafafa;
+}
+
+.header__right--bot > button {
+  transition: background-color 0.3s ease;
+}
+
+.header__right--bot > button:is(:hover, :active){
+  background-color: #1f2937;
+}
+
+.icon__small {
+  border-radius: 100%;;
+}
+
+.container__card {
+  display: grid;
+  grid-column:  2 / 3;
+  grid-auto-flow: row;
+}
+
+.container__header {
+  margin-top:  4em;
+  margin-inline-start: 2.7em;
+  margin-block-start: 5em;
+  margin-block-end: 1em;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+.card {
+  max-width: 400px;
+  background-color: #fafafa;
+  padding: 2em 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-left: red 0.3rem solid;
+}
+
+.card__icon {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+}
+
+.card3 {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
+.container__article {
+  grid-column: 3 / 4;
+  grid-row: 3;
+  margin-top: 3.2em ;
+}
+
+.card__announcement {
+  background-color: #ededf5;
+  padding: 0.8em;
+  margin-block-end: 2em;
+  margin-inline-end: 2em;
+  border-radius: 5px;
+}
+
+.card__announcement h4 {
+  margin-block-start: 1em;
+}
+
+.article__card {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+}
